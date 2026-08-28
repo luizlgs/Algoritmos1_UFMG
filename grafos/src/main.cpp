@@ -7,7 +7,7 @@ void new_edge(Node *u, Node *v) {
     u->new_adj(v);
 }
 
-//dfs algorithm
+//dfs algorithm adjacency list
 void dfs(Node* node, std::vector<int*>& topological_sort){
     node->set_discovered();
 
@@ -20,6 +20,9 @@ void dfs(Node* node, std::vector<int*>& topological_sort){
     topological_sort.insert(topological_sort.begin(), id);
     //std::cout << node->get_id() << std::endl;
 }
+
+//dfs algorithm adjacency matrix
+
 
 void sqared_graph(std::vector<Node*> graph){ //imprime duplicatas pois podem ter mais de um caminho de tamanho 2 entre dois vertices
     for(int i=1; i<graph.size(); i++){
